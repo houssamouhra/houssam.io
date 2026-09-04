@@ -1,0 +1,7 @@
+set -e
+
+printf "\033[34m→\033[0m Running pre-commit checks...\n"
+
+pnpm lint-staged
+
+printf "\033[32m✓\033[0m Staged files are clean.\n"

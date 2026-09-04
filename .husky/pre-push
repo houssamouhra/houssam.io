@@ -1,0 +1,14 @@
+set -e
+
+printf "\033[34m→\033[0m Running pre-push checks...\n"
+
+printf "\033[34m→\033[0m Running lint...\n"
+pnpm lint
+
+printf "\033[34m→\033[0m Running type check...\n"
+pnpm typecheck
+
+printf "\033[34m→\033[0m Running format check...\n"
+pnpm format:check
+
+printf "\033[32m✓\033[0m All checks passed.\n"
