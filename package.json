@@ -1,16 +1,16 @@
 {
   "name": "houssam.io",
-  "version": "0.1.0",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint .",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
     "typecheck": "tsc --noEmit",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
     "commitlint": "commitlint",
     "prepare": "husky"
   },
@@ -33,13 +33,12 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "babel-plugin-react-compiler": "1.0.0",
-    "eslint": "^9",
-    "eslint-config-next": "16.3.4",
     "husky": "^9.1.7",
     "lint-staged": "^17.4.1",
-    "prettier": "^3.9.6",
+    "oxfmt": "^0.71.0",
+    "oxlint": "^1.86.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   },
-  "packageManager": "pnpm@11.25.0"
+  "packageManager": "pnpm@12.8.0"
 }

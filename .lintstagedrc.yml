@@ -1,6 +1,6 @@
-'**/*.{ts,tsx}':
-  - eslint --fix
-  - prettier --write
+'**/*.{js,jsx,ts,tsx,mjs,cjs}':
+  - pnpm run lint
+  - pnpm run format
 
-'**/*.{html, css, json, yml, md}':
-  - prettier --write
+'**/*.{html,css,json,yml,yaml,md}':
+  - pnpm run format
