@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import { cn } from '@/lib/utils';
-import NavBar from '@/components/NavBar';
+import Navbar from '@/components/Navbar';
 import './globals.css';
 
 const mapleMono = localFont({
@@ -24,7 +24,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
     <html lang='en' className={cn('h-full', 'antialiased', mapleMono.variable, 'font-mono')}>
       <body className='min-h-full flex flex-col'>
-        <NavBar />
+        <Navbar />
         {children}
       </body>
     </html>

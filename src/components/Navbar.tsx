@@ -1,6 +1,6 @@
 import { Palette } from 'lucide-react';
 
-const NavBar = () => {
+const Navbar = () => {
   return (
     <nav className='fixed grid w-full grid-cols-2 items-center p-2'>
       <div className='text-primary select-none'>houssam.io</div>
@@ -11,4 +11,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Navbar;
