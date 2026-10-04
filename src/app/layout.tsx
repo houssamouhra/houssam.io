@@ -3,6 +3,7 @@ import localFont from 'next/font/local';
 import { cn } from '@/lib/utils';
 import { cookies } from 'next/headers';
 import Navbar from '@/components/Navbar';
+import { Toaster } from '@/components/ui/sonner';
 import { ThemeProvider, type Theme } from '@/components/ThemeProvider';
 import './globals.css';
 
@@ -47,6 +48,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         <ThemeProvider initialTheme={initialTheme} initialResolvedTheme={initialResolvedTheme}>
           <Navbar />
           {children}
+          <Toaster position='top-center' />
         </ThemeProvider>
       </body>
     </html>
