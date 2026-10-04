@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import localFont from 'next/font/local';
+import { JetBrains_Mono } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import { cookies } from 'next/headers';
 import Navbar from '@/components/Navbar';
@@ -7,15 +7,9 @@ import { Toaster } from '@/components/ui/sonner';
 import { ThemeProvider, type Theme } from '@/components/ThemeProvider';
 import './globals.css';
 
-const mapleMono = localFont({
-  src: [
-    { path: './fonts/MapleMonoNormal-Regular.ttf.woff2', weight: '400', style: 'normal' },
-    { path: './fonts/MapleMonoNormal-Medium.ttf.woff2', weight: '500', style: 'normal' },
-    { path: './fonts/MapleMonoNormal-SemiBold.ttf.woff2', weight: '600', style: 'normal' },
-    { path: './fonts/MapleMonoNormal-Bold.ttf.woff2', weight: '700', style: 'normal' },
-  ],
-  variable: '--font-maple-mono',
-  display: 'swap',
+const jetBrainsMono = JetBrains_Mono({
+  variable: '--font-jetbrains-mono',
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
@@ -41,7 +35,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
     <html
       lang='en'
       suppressHydrationWarning
-      className={cn('h-full', 'antialiased', mapleMono.variable, 'font-mono')}
+      className={cn('h-full', 'antialiased', jetBrainsMono.variable, 'font-mono')}
       style={{ colorScheme: initialResolvedTheme }}
     >
       <body className='min-h-full flex flex-col'>
