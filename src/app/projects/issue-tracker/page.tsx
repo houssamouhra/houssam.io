@@ -24,7 +24,7 @@ const IssuetrackerProjectPage = () => {
       <ProjectHeader project={project} />
       <ShowcaseImage src={gamehubShowcase} alt='game-hub showcase' />
 
-      <p className='text-lg leading-relaxed text-muted-foreground'>
+      <p className='text-lg leading-relaxed'>
         A modern full-stack issue tracker for managing and tracking software development issues.
       </p>
 

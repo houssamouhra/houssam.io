@@ -31,7 +31,7 @@ const GamehubProjectPage = () => {
       <ProjectHeader project={project} />
       <ShowcaseImage src={gamehubShowcase} alt='game-hub showcase' />
 
-      <p className='text-lg leading-relaxed text-muted-foreground'>
+      <p className='text-lg leading-relaxed'>
         A modern game discovery web app for browsing, searching, and filtering video games with a
         clean responsive UI powered by the RAWG API.
       </p>
