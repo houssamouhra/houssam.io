@@ -26,6 +26,7 @@
   --color-warm: var(--warm);
   --color-teal: var(--teal);
   --color-tealess: var(--tealess);
+  --color-green: var(--green);
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
@@ -77,6 +78,7 @@
   --chart-4: #587539;
   --chart-5: #8c6c3e;
   --warm: #8c6c3e;
+  --green: #587539;
   --teal: #1abc9c;
   --tealess: #73daca;
   --radius: 0.5rem;
@@ -116,6 +118,7 @@
   --chart-4: #9ece6a;
   --chart-5: #e0af68;
   --warm: #e0af68;
+  --green: #9ece6a;
   --teal: #1abc9c;
   --tealess: #73daca;
   --sidebar: #16161e;
