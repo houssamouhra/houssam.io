@@ -1,5 +1,4 @@
 'use client';
-
 import Image from 'next/image';
 import { ActionTooltip } from '@/components/ActionTooltip';
 import { useTheme } from '@/components/ThemeProvider';
