@@ -5,6 +5,9 @@ import { cookies } from 'next/headers';
 import Navbar from '@/components/Navbar';
 import { Toaster } from '@/components/ui/sonner';
 import { ThemeProvider, type Theme } from '@/components/ThemeProvider';
+import Script from 'next/script';
+import LoadingBar from '@/components/loading-bar/LoadingBar';
+import { reloadLoadingBarBootstrap } from '@/components/loading-bar/LoadingBar-bootstrap';
 import './globals.css';
 
 const jetBrainsMono = JetBrains_Mono({
@@ -39,7 +42,11 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
       style={{ colorScheme: initialResolvedTheme }}
     >
       <body className='min-h-full flex flex-col'>
+        <Script id='reload-loading-bar-bootstrap' strategy='beforeInteractive'>
+          {reloadLoadingBarBootstrap}
+        </Script>
         <ThemeProvider initialTheme={initialTheme} initialResolvedTheme={initialResolvedTheme}>
+          <LoadingBar />
           <Navbar />
           {children}
           <Toaster position='top-center' />
