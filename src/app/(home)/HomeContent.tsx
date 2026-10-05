@@ -39,12 +39,12 @@ const buttons = [
 const socials = [
   {
     label: 'github',
-    href: 'https://github.com/houssamouhra',
+    href: '/redirect/github',
     icon: RiGithubLine,
   },
   {
     label: 'linkedin',
-    href: 'https://www.linkedin.com/in/houssamouhra',
+    href: '/redirect/linkedin',
     icon: RiLinkedinBoxFill,
   },
 ] as const;
