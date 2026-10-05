@@ -54,7 +54,7 @@ const ProjectCard = ({
         aria-label={`View ${title} project details`}
         className='absolute inset-0 z-10 rounded-md outline-primary focus-visible:outline-2 focus-visible:outline-offset-2'
       />
-      <div className='pointer-events-none absolute inset-0 transition-colors duration-300 ease-in-out group-hover:bg-popover/80' />
+      <div className='pointer-events-none absolute inset-0 transition-colors duration-300 ease-in-out group-hover:bg-muted' />
       <div className='pointer-events-none relative z-20 flex h-full flex-col gap-4 p-4'>
         <p className='text-base leading-none font-semibold text-green'>{title}</p>
         <div className='pointer-events-auto relative w-max'>
