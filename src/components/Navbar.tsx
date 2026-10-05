@@ -30,10 +30,10 @@ const Navbar = () => {
 
   const currentPage =
     pathname === '/' ? null : (
-      <p className='max-w-40 truncate overflow-hidden font-semibold whitespace-nowrap md:max-w-none select-none'>
-        <span className='text-accent'>~</span>
-        <span className='text-accent'>/</span>
-        <span className='text-accent'>{pathname.slice(1)}</span>
+      <p className='max-w-40 truncate overflow-hidden text-primary font-bold whitespace-nowrap md:max-w-none select-none'>
+        <span>~</span>
+        <span>/</span>
+        <span>{pathname.slice(1)}</span>
       </p>
     );
 
