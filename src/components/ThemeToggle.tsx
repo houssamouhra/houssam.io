@@ -18,7 +18,7 @@ const ThemeToggle = () => {
         <button
           type='button'
           aria-label='Toggle theme'
-          className='inline-flex cursor-pointer items-center justify-center text-muted-foreground transition-colors duration-200 hover:text-accent focus:outline-none focus:ring-0 focus-visible:outline-none focus-visible:ring-0'
+          className='inline-flex cursor-pointer items-center justify-center text-muted-foreground transition-colors duration-200 hover:text-foreground focus:outline-none focus:ring-0 focus-visible:outline-none focus-visible:ring-0'
         >
           <Palette className='h-6 w-6' />
         </button>
