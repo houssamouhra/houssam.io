@@ -38,7 +38,7 @@ const Navbar = () => {
     );
 
   return (
-    <nav className='fixed top-0 z-3 w-full'>
+    <nav className='fixed top-0 z-3 w-full bg-background'>
       <div className='grid w-full grid-cols-[1fr_auto_1fr] items-center p-2'>
         <div className='flex items-center'>{navigationControls}</div>
         {currentPage ? (
