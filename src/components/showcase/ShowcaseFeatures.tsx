@@ -24,7 +24,7 @@ const ShowcaseFeatures = ({ title = 'Features', features, columns = 2 }: Showcas
         {features.map((feature) => (
           <li
             key={feature}
-            className='group flex items-start gap-3 text-[15px] leading-relaxed text-foreground'
+            className='group flex items-start gap-3 text-base leading-relaxed text-foreground'
           >
             <span className='mt-2.25 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/70 transition-colors group-hover:bg-primary' />
             <span>{feature}</span>
