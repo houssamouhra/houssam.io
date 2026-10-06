@@ -13,6 +13,7 @@ const buttons = [
   {
     label: 'contact me',
     href: null,
+    target: undefined,
     icon: Mail,
     iconClassName: 'mail',
     cardClassName: 'bg-teal text-background hover:bg-teal/80',
@@ -21,6 +22,7 @@ const buttons = [
   {
     label: 'projects',
     href: '/projects',
+    target: undefined,
     icon: Webhook,
     iconClassName: 'icon',
     cardClassName: 'bg-accent text-background hover:bg-accent/80',
@@ -28,7 +30,8 @@ const buttons = [
   },
   {
     label: 'resume',
-    href: '/resume',
+    href: '/assets/resume/houssam-resume.pdf',
+    target: '_blank',
     icon: FileUser,
     iconClassName: 'resume',
     cardClassName: 'bg-warm text-background hover:bg-warm/80',
@@ -106,58 +109,60 @@ const HomeContent = () => {
           </div>
 
           <div className='grid w-full grid-flow-row place-content-center gap-2 pt-4 sm:grid-flow-col'>
-            {buttons.map(({ label, href, icon: Icon, iconClassName, cardClassName, delay }) => {
-              const card = (
-                <div
-                  className={cn(
-                    'grid grid-cols-[max-content_max-content] place-items-center gap-1 rounded-md p-2 duration-300 ease-in-out',
-                    cardClassName,
-                  )}
-                >
-                  <Icon className={cn('h-4 w-4', styles[iconClassName])} />
-                  <span>{label}</span>
-                </div>
-              );
+            {buttons.map(
+              ({ label, href, target, icon: Icon, iconClassName, cardClassName, delay }) => {
+                const card = (
+                  <div
+                    className={cn(
+                      'grid grid-cols-[max-content_max-content] place-items-center gap-1 rounded-md p-2 duration-300 ease-in-out',
+                      cardClassName,
+                    )}
+                  >
+                    <Icon className={cn('h-4 w-4', styles[iconClassName])} />
+                    <span>{label}</span>
+                  </div>
+                );
 
-              return (
-                <div
-                  key={label}
-                  className={cn(
-                    'z-10 w-full',
-                    isPending && styles['pre-bouncing-animation'],
-                    shouldAnimate && styles['bouncing-animation'],
-                  )}
-                  style={{ animationDelay: delay }}
-                >
-                  {href ? (
-                    <Link
-                      href={href}
-                      target={href.startsWith('http') ? '_blank' : undefined}
-                      rel={href.startsWith('http') ? 'noreferrer' : undefined}
-                      className={cn(
-                        'block w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
-                        styles.button,
-                      )}
-                      aria-label={label}
-                    >
-                      {card}
-                    </Link>
-                  ) : (
-                    <button
-                      type='button'
-                      onClick={copyEmail}
-                      className={cn(
-                        'block w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
-                        styles.button,
-                      )}
-                      aria-label={label}
-                    >
-                      {card}
-                    </button>
-                  )}
-                </div>
-              );
-            })}
+                return (
+                  <div
+                    key={label}
+                    className={cn(
+                      'z-10 w-full',
+                      isPending && styles['pre-bouncing-animation'],
+                      shouldAnimate && styles['bouncing-animation'],
+                    )}
+                    style={{ animationDelay: delay }}
+                  >
+                    {href ? (
+                      <Link
+                        href={href}
+                        target={target}
+                        rel={target === '_blank' ? 'noopener noreferrer' : undefined}
+                        className={cn(
+                          'block w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
+                          styles.button,
+                        )}
+                        aria-label={label}
+                      >
+                        {card}
+                      </Link>
+                    ) : (
+                      <button
+                        type='button'
+                        onClick={copyEmail}
+                        className={cn(
+                          'block w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
+                          styles.button,
+                        )}
+                        aria-label={label}
+                      >
+                        {card}
+                      </button>
+                    )}
+                  </div>
+                );
+              },
+            )}
           </div>
         </div>
       </main>
